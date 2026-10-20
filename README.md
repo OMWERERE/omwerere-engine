@@ -12,8 +12,14 @@ Built once here, installed everywhere, instead of copying files between repos.
 Rere Gate stays its own package (`omwerere-safety-gate`) because it has clinical sign-off rules.
 
 ```
-pip install -e .
+pip install -e ".[test]"
 python -m pytest -q
+```
+
+From another project, pin the release instead of a sibling folder (ADR 038):
+
+```
+pip install "omwerere-engine @ git+https://github.com/OMWERERE/omwerere-engine.git@v0.1.0"
 ```
 
 Migration status lives in `../STACK-ALIGNMENT-2026-10-14.md`.
